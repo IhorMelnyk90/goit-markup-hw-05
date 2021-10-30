@@ -70,19 +70,9 @@
       <section>
         <div class="hero hero-container">
           <h1 class="banner">Эффективные решения для вашего бизнеса</h1>
-          <button class="order" type="button">Заказать услугу</button>
-
-          <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente modi facilis alias, nemo vitae enim quo, itaque numquam
-                ducimus quas obcaecati recusandae aspernatur dolorem incidunt
-                fugit qui, in totam? Unde!
-              </p>
-              <button data-modal-close>Закрыть</button>
-            </div>
-          </div>
+          <button class="order" type="button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
 
@@ -427,6 +417,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg class="modal-close-icon" width="18" weight="18">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>

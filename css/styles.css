@@ -524,7 +524,7 @@ img {
     box-shadow var(--delay-time) var(--cubic-1);
 }
 
-/*Портфолио*/
+/*---------------------------Портфолио---------------------------*/
 
 .portfolio-list {
   display: flex;
@@ -561,7 +561,7 @@ img {
   transition: box-shadow var(--delay-time) var(--cubic-1);
 }
 
-/*елементи списка портфолио*/
+/*---------------------------елементи списка портфолио---------------------------*/
 
 .port-text-group {
   padding-top: 20px;
@@ -589,7 +589,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-/*Постоянные клиенты*/
+/*---------------------------Постоянные клиенты---------------------------*/
 
 .clients {
   padding-top: 94px;
@@ -646,7 +646,7 @@ img {
   transition: fill var(--delay-time) var(--cubic-1);
 }
 
-/*Футер*/
+/*---------------------------Футер---------------------------*/
 
 .footer {
   padding-top: 60px;
@@ -725,7 +725,7 @@ img {
   transition: color var(--delay-time) var(--cubic-1);
 }
 
-/*Присоединяйтесь*/
+/*---------------------------Присоединяйтесь---------------------------*/
 
 .footer-title {
   margin-bottom: 20px;
@@ -758,4 +758,55 @@ img {
 .footer-social-link:focus {
   background-color: var(--fist-text-color);
   transition: background-color var(--delay-time) var(--cubic-1);
+}
+
+/*---------------------------Модалочка---------------------------*/
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  transition: opacity var(--delay-time) var(--cubic-1),
+    visibility var(--delay-time) var(--cubic-1);
+}
+
+.backdrop.is-hidden .modal {
+  transform: rotate(-20deg);
+  transition: transform var(--delay-time) var(--cubic-1);
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  min-height: 584px;
+  background-color: var(--third-text-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: transform var(--delay-time) var(--cubic-1);
+}
+
+.modal-btn {
+  border: 1px solid #999999;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
