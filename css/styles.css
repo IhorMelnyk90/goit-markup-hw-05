@@ -11,6 +11,8 @@
   --head-button-hover-backgr: #188ce8;
   --icon-text-color: #afb1b8;
   --footer-second-bgc: rgba(255, 255, 255, 0.1);
+  --delay-time: 250ms;
+  --cubic-1: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 p,
@@ -132,7 +134,8 @@ img {
 }
 
 .menu-link {
-  display: flex;
+  display: block;
+  position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -140,20 +143,35 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--second-text-color);
+  transition: color var(--delay-time) var(--cubic-1);
 }
 
 .menu-link:hover,
 .menu-link:focus {
   color: var(--fist-text-color);
+  transition: color var(--delay-time) var(--cubic-1);
 }
 
 .link-current {
-  display: flex;
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--fist-text-color);
+}
+
+.link-current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--fist-text-color);
+  transform: scaleX(1);
 }
 
 .header-connect {
@@ -174,9 +192,11 @@ img {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color var(--delay-time) var(--cubic-1);
 }
 .header-contacts:hover,
 .header-contacts:focus {
+  transition: color var(--delay-time) var(--cubic-1);
   color: var(--fist-text-color);
 }
 
@@ -185,11 +205,13 @@ img {
   height: 12px;
   margin-right: 10px;
   fill: var(--general-text-color);
+  transition: fill var(--delay-time) var(--cubic-1);
 }
 
 .header-contacts:hover .mail-icon,
 .header-contacts:focus .mail-icon {
   fill: var(--fist-text-color);
+  transition: fill var(--delay-time) var(--cubic-1);
 }
 
 .tell-icon {
@@ -197,11 +219,13 @@ img {
   height: 16px;
   margin-right: 10px;
   fill: var(--general-text-color);
+  transition: fill var(--delay-time) var(--cubic-1);
 }
 
 .header-contacts:hover .tell-icon,
 .header-contacts:focus .tell-icon {
   fill: var(--fist-text-color);
+  transition: fill var(--delay-time) var(--cubic-1);
 }
 
 /*герой*/
@@ -248,6 +272,8 @@ img {
 }
 
 .hero .order {
+  display: inline-flex;
+  align-items: center;
   padding-top: 10px;
   padding-right: 32px;
   padding-bottom: 10px;
@@ -259,10 +285,12 @@ img {
   line-height: 1.8;
   letter-spacing: 0.06em;
   font-family: inherit;
+  transition: background-color var(--delay-time) var(--cubic-1);
 }
 .hero .order:hover,
 .hero .order:focus {
   background-color: var(--head-button-hover-backgr);
+  transition: background-color var(--delay-time) var(--cubic-1);
 }
 
 /*Особенности*/
@@ -424,22 +452,26 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color var(--delay-time) var(--cubic-1);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--fist-text-color);
-}
-
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-  fill: var(--third-text-color);
+  transition: background-color var(--delay-time) var(--cubic-1);
 }
 
 .social-icon {
   width: 20px;
   height: 20px;
   fill: var(--icon-text-color);
+  transition: fill var(--delay-time) var(--cubic-1);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--third-text-color);
+  transition: fill var(--delay-time) var(--cubic-1);
 }
 
 /* Портфолио фильтр*/
@@ -477,6 +509,9 @@ img {
   line-height: 1.63;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+  transition: color var(--delay-time) var(--cubic-1),
+    background-color var(--delay-time) var(--cubic-1),
+    box-shadow var(--delay-time) var(--cubic-1);
 }
 
 .order2:hover,
@@ -484,6 +519,9 @@ img {
   color: var(--third-text-color);
   background-color: var(--fist-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: color var(--delay-time) var(--cubic-1),
+    background-color var(--delay-time) var(--cubic-1),
+    box-shadow var(--delay-time) var(--cubic-1);
 }
 
 /*Портфолио*/
@@ -502,21 +540,25 @@ img {
   cursor: pointer;
   background-color: var(--third-text-color);
   box-sizing: border-box;
+  transition: box-shadow var(--delay-time) var(--cubic-1);
 }
 
 .portfolio-item:hover,
 .portfolio-item:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow var(--delay-time) var(--cubic-1);
 }
 
 .work-link {
   display: block;
+  transition: box-shadow var(--delay-time) var(--cubic-1);
 }
 
 .work-link:hover,
 .work-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow var(--delay-time) var(--cubic-1);
 }
 
 /*елементи списка портфолио*/
@@ -595,11 +637,13 @@ img {
   width: 106px;
   height: 60px;
   fill: var(--icon-text-color);
+  transition: fill var(--delay-time) var(--cubic-1);
 }
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
   fill: var(--fist-text-color);
+  transition: fill var(--delay-time) var(--cubic-1);
 }
 
 /*Футер*/
@@ -657,11 +701,13 @@ img {
   line-height: 1.71px;
   letter-spacing: 0.03em;
   color: var(--footer-nav-text-color);
+  transition: color var(--delay-time) var(--cubic-1);
 }
 
 .footer-mail:hover,
 .footer-mail:focus {
   color: var(--fist-text-color);
+  transition: color var(--delay-time) var(--cubic-1);
 }
 
 .footer-tel {
@@ -671,10 +717,12 @@ img {
   line-height: 1.71px;
   letter-spacing: 0.03em;
   color: var(--footer-nav-text-color);
+  transition: color var(--delay-time) var(--cubic-1);
 }
 .footer-tel:hover,
 .footer-tel:focus {
   color: var(--fist-text-color);
+  transition: color var(--delay-time) var(--cubic-1);
 }
 
 /*Присоединяйтесь*/
@@ -703,9 +751,11 @@ img {
   width: 20px;
   height: 20px;
   fill: var(--third-text-color);
+  transition: background-color var(--delay-time) var(--cubic-1);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--fist-text-color);
+  transition: background-color var(--delay-time) var(--cubic-1);
 }
