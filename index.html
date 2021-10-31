@@ -17,18 +17,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>WebStudio</title>
   </head>
 
   <body>
+    <!--------------------------------Хедер-------------------------------->
     <header class="header">
       <div class="container header-container">
+        <!--------------------------------Лого-------------------------------->
         <nav class="header-nav">
-          <a class="header-logo" href="./index.html">
+          <a
+            class="header-logo animate__animated animate__zoomIn"
+            href="./index.html"
+          >
             Web<span class="header-logo2">Studio</span></a
           >
-
+          <!--------------------------------Меню-------------------------------->
           <ul class="list menu-list">
             <li class="menu-item">
               <a class="menu-link link link-current" href="./index.html"
@@ -43,7 +52,7 @@
             </li>
           </ul>
         </nav>
-
+        <!--------------------------------Контакты-------------------------------->
         <ul class="header-connect">
           <li class="connect-item">
             <a class="header-contacts link" href="mailto:info@devstudio.com">
@@ -66,7 +75,7 @@
     </header>
 
     <main>
-      <!--Герой-->
+      <!--------------------------------Герой-------------------------------->
       <section>
         <div class="hero hero-container">
           <h1 class="banner">Эффективные решения для вашего бизнеса</h1>
@@ -76,7 +85,7 @@
         </div>
       </section>
 
-      <!--Особенности-->
+      <!---------------------------Особенности--------------------------->
       <section class="skills-section">
         <div class="container">
           <h2 class="visually-hidden">Особенности</h2>
@@ -133,25 +142,34 @@
         </div>
       </section>
 
-      <!--Наша работа-->
+      <!---------------------------Наша работа--------------------------->
       <section class="work-section">
         <div class="container">
           <h2 class="work-header">Чем мы занимаемся</h2>
           <ul class="work-list">
             <li class="work-item">
               <img src="./images/work_1.jpg" width="370" alt="занятие 1" />
+              <div class="work-item-text-wrap">
+                <p class="work-item-text">Десктопные приложения</p>
+              </div>
             </li>
             <li class="work-item">
               <img src="./images/work_2.jpg" width="370" alt="занятие 2" />
+              <div class="work-item-text-wrap">
+                <p class="work-item-text">Мобильные приложения</p>
+              </div>
             </li>
             <li class="work-item">
               <img src="./images/work_3.jpg" width="370" alt="занятие 3" />
+              <div class="work-item-text-wrap">
+                <p class="work-item-text">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
       </section>
 
-      <!--Наша команда-->
+      <!---------------------------Наша команда--------------------------->
       <section class="team-container">
         <div class="container">
           <h2 class="team-header">Наша команда</h2>
@@ -307,7 +325,7 @@
           </ul>
         </div>
       </section>
-
+      <!--------------------------------Постоянные клиенты-------------------------------->
       <section class="clients">
         <div class="container">
           <h2 class="clients-title">Постоянные клиенты</h2>
@@ -358,7 +376,7 @@
         </div>
       </section>
     </main>
-
+    <!--------------------------------Футер-------------------------------->
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer-address">
@@ -381,7 +399,7 @@
             </ul>
           </address>
         </div>
-
+        <!--------------------------------Присоединяйтесь-------------------------------->
         <div class="footer-social">
           <p class="footer-title">присоединяйтесь</p>
           <ul class="social-list">

@@ -17,17 +17,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Portfolio</title>
   </head>
 
   <body>
+    <!--------------------------------Хедер-------------------------------->
     <header class="header">
       <div class="container header-container">
+        <!--------------------------------Лого-------------------------------->
         <nav class="header-nav">
-          <a class="header-logo" href="./index.html">
+          <a
+            class="header-logo animate__animated animate__zoomIn"
+            href="./index.html"
+          >
             Web<span class="header-logo2">Studio</span></a
           >
+          <!--------------------------------Меню-------------------------------->
 
           <ul class="list menu-list">
             <li class="menu-item">
@@ -43,7 +53,7 @@
             </li>
           </ul>
         </nav>
-
+        <!--------------------------------Контакты-------------------------------->
         <ul class="header-connect">
           <li class="connect-item">
             <a class="header-contacts link" href="mailto:info@devstudio.com">
@@ -68,7 +78,7 @@
     <main>
       <section class="section">
         <div class="container">
-          <!--Фильтр работ-->
+          <!--------------------------------Фильтр работ-------------------------------->
           <h1 class="visually-hidden">Портфолио</h1>
 
           <ul class="filter">
@@ -91,12 +101,19 @@
             </li>
           </ul>
 
-          <!--portfolio-->
+          <!--------------------------------Портфолио-------------------------------->
 
           <ul class="portfolio-list">
             <li class="portfolio-item">
               <a href="#" class="work-link">
-                <img src="./images/prj1.jpg" alt="Технокряк" />
+                <div class="work-link-wrap">
+                  <img src="./images/prj1.jpg" alt="Технокряк" />
+                  <p class="port-img-text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
                 <div class="port-text-group">
                   <h2 class="project-title">Технокряк</h2>
                   <p class="project-text">Веб-сайт</p>
@@ -105,11 +122,19 @@
             </li>
             <li class="portfolio-item">
               <a href="#" class="work-link">
-                <img
-                  src="./images/prj2.jpg"
-                  width="370"
-                  alt="New Orlean vs Golden Star"
-                />
+                <div class="work-link-wrap">
+                  <img
+                    src="./images/prj2.jpg"
+                    width="370"
+                    alt="New Orlean vs Golden Star"
+                  />
+                  <p class="port-img-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi amet similique aspernatur unde sequi sint tenetur
+                    exercitationem veritatis iusto, quis quia officiis ab
+                    laudantium quae. Perspiciatis rem voluptates vitae incidunt!
+                  </p>
+                </div>
                 <div class="port-text-group">
                   <h2 class="project-title">
                     Постер New Orlean vs Golden Star
@@ -120,11 +145,19 @@
             </li>
             <li class="portfolio-item">
               <a href="#" class="work-link">
-                <img
-                  src="./images/prj3.jpg"
-                  width="370"
-                  alt="Ресторан Seafood"
-                />
+                <div class="work-link-wrap">
+                  <img
+                    src="./images/prj3.jpg"
+                    width="370"
+                    alt="Ресторан Seafood"
+                  />
+                  <p class="port-img-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi amet similique aspernatur unde sequi sint tenetur
+                    exercitationem veritatis iusto, quis quia officiis ab
+                    laudantium quae. Perspiciatis rem voluptates vitae incidunt!
+                  </p>
+                </div>
                 <div class="port-text-group">
                   <h2 class="project-title">Ресторан Seafood</h2>
                   <p class="project-text">Приложение</p>
@@ -133,7 +166,15 @@
             </li>
             <li class="portfolio-item">
               <a href="#" class="work-link">
-                <img src="./images/prj4.jpg" width="370" alt="Проект Prime" />
+                <div class="work-link-wrap">
+                  <img src="./images/prj4.jpg" width="370" alt="Проект Prime" />
+                  <p class="port-img-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi amet similique aspernatur unde sequi sint tenetur
+                    exercitationem veritatis iusto, quis quia officiis ab
+                    laudantium quae. Perspiciatis rem voluptates vitae incidunt!
+                  </p>
+                </div>
                 <div class="port-text-group">
                   <h2 class="project-title">Проект Prime</h2>
                   <p class="project-text">Маркетинг</p>
@@ -142,7 +183,15 @@
             </li>
             <li class="portfolio-item">
               <a href="#" class="work-link">
-                <img src="./images/prj5.jpg" width="370" alt="Проект Boxes" />
+                <div class="work-link-wrap">
+                  <img src="./images/prj5.jpg" width="370" alt="Проект Boxes" />
+                  <p class="port-img-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi amet similique aspernatur unde sequi sint tenetur
+                    exercitationem veritatis iusto, quis quia officiis ab
+                    laudantium quae. Perspiciatis rem voluptates vitae incidunt!
+                  </p>
+                </div>
                 <div class="port-text-group">
                   <h2 class="project-title">Проект Boxes</h2>
                   <p class="project-text">Приложение</p>
@@ -151,11 +200,19 @@
             </li>
             <li class="portfolio-item">
               <a href="#" class="work-link">
-                <img
-                  src="./images/prj6.jpg"
-                  width="370"
-                  alt="Inspiration has no Borders"
-                />
+                <div class="work-link-wrap">
+                  <img
+                    src="./images/prj6.jpg"
+                    width="370"
+                    alt="Inspiration has no Borders"
+                  />
+                  <p class="port-img-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi amet similique aspernatur unde sequi sint tenetur
+                    exercitationem veritatis iusto, quis quia officiis ab
+                    laudantium quae. Perspiciatis rem voluptates vitae incidunt!
+                  </p>
+                </div>
                 <div class="port-text-group">
                   <h2 class="project-title">Inspiration has no Borders</h2>
                   <p class="project-text">Веб-сайт</p>
@@ -164,11 +221,19 @@
             </li>
             <li class="portfolio-item">
               <a href="#" class="work-link">
-                <img
-                  src="./images/prj7.jpg"
-                  width="370"
-                  alt="Издание Limited Edition"
-                />
+                <div class="work-link-wrap">
+                  <img
+                    src="./images/prj7.jpg"
+                    width="370"
+                    alt="Издание Limited Edition"
+                  />
+                  <p class="port-img-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi amet similique aspernatur unde sequi sint tenetur
+                    exercitationem veritatis iusto, quis quia officiis ab
+                    laudantium quae. Perspiciatis rem voluptates vitae incidunt!
+                  </p>
+                </div>
                 <div class="port-text-group">
                   <h2 class="project-title">Издание Limited Edition</h2>
                   <p class="project-text">Дизайн</p>
@@ -177,7 +242,15 @@
             </li>
             <li class="portfolio-item">
               <a href="#" class="work-link">
-                <img src="./images/prj8.jpg" width="370" alt="Проект LAB" />
+                <div class="work-link-wrap">
+                  <img src="./images/prj8.jpg" width="370" alt="Проект LAB" />
+                  <p class="port-img-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi amet similique aspernatur unde sequi sint tenetur
+                    exercitationem veritatis iusto, quis quia officiis ab
+                    laudantium quae. Perspiciatis rem voluptates vitae incidunt!
+                  </p>
+                </div>
                 <div class="port-text-group">
                   <h2 class="project-title">Проект LAB</h2>
                   <p class="project-text">Маркетинг</p>
@@ -186,11 +259,19 @@
             </li>
             <li class="portfolio-item">
               <a href="#" class="work-link">
-                <img
-                  src="./images/prj9.jpg"
-                  width="370"
-                  alt="Growing Business"
-                />
+                <div class="work-link-wrap">
+                  <img
+                    src="./images/prj9.jpg"
+                    width="370"
+                    alt="Growing Business"
+                  />
+                  <p class="port-img-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi amet similique aspernatur unde sequi sint tenetur
+                    exercitationem veritatis iusto, quis quia officiis ab
+                    laudantium quae. Perspiciatis rem voluptates vitae incidunt!
+                  </p>
+                </div>
                 <div class="port-text-group">
                   <h2 class="project-title">Growing Business</h2>
                   <p class="project-text">Приложение</p>
@@ -201,7 +282,7 @@
         </div>
       </section>
     </main>
-
+    <!--------------------------------Футер-------------------------------->
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer-address">
@@ -224,7 +305,7 @@
             </ul>
           </address>
         </div>
-
+        <!--------------------------------Присоединяйтесь-------------------------------->
         <div class="footer-social">
           <p class="footer-title">присоединяйтесь</p>
           <ul class="social-list">

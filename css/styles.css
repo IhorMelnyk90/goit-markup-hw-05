@@ -11,6 +11,7 @@
   --head-button-hover-backgr: #188ce8;
   --icon-text-color: #afb1b8;
   --footer-second-bgc: rgba(255, 255, 255, 0.1);
+  --work-bg-color: rgba(47, 48, 58, 0.8);
   --delay-time: 250ms;
   --cubic-1: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -62,6 +63,8 @@ img {
   height: auto;
 }
 
+/*---------------------------Стили сайта---------------------------*/
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -87,7 +90,7 @@ img {
   list-style: none;
 }
 
-/*Шапка*/
+/*---------------------------Шапка---------------------------*/
 
 .header {
   background-color: var(--third-text-color);
@@ -123,7 +126,7 @@ img {
   color: var(--fifth-color);
 }
 
-/*Меню*/
+/*---------------------------Меню---------------------------*/
 
 .menu-list {
   display: flex;
@@ -228,7 +231,7 @@ img {
   transition: fill var(--delay-time) var(--cubic-1);
 }
 
-/*герой*/
+/*---------------------------Герой---------------------------*/
 
 .hero-container {
   max-width: 1600px;
@@ -255,7 +258,7 @@ img {
   text-align: center;
 }
 
-/*баннер*/
+/*---------------------------Баннер---------------------------*/
 
 .banner {
   width: 696px;
@@ -293,7 +296,7 @@ img {
   transition: background-color var(--delay-time) var(--cubic-1);
 }
 
-/*Особенности*/
+/*---------------------------Особенности---------------------------*/
 
 .skills-section {
   padding-top: 94px;
@@ -345,7 +348,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-/*Наша работа*/
+/*---------------------------Наша работа---------------------------*/
 
 .work-section {
   padding-bottom: 94px;
@@ -368,13 +371,34 @@ img {
 .work-item {
   margin-right: 30px;
   width: 370px;
+  position: relative;
 }
 
 .work-item:nth-child(3n) {
   margin-right: 0;
 }
 
-/*Наша команда*/
+.work-item-text-wrap {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--work-bg-color);
+}
+
+.work-item-text {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--third-text-color);
+}
+
+/*---------------------------Наша команда---------------------------*/
 
 .team-container {
   padding-top: 94px;
@@ -474,7 +498,8 @@ img {
   transition: fill var(--delay-time) var(--cubic-1);
 }
 
-/* Портфолио фильтр*/
+/*---------------------------Портфолио фильтр---------------------------*/
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -561,7 +586,33 @@ img {
   transition: box-shadow var(--delay-time) var(--cubic-1);
 }
 
-/*---------------------------елементи списка портфолио---------------------------*/
+.work-link-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.port-img-text {
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--third-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: transform var(--delay-time) var(--cubic-1);
+}
+
+.work-link:hover .port-img-text,
+.work-link:focus .port-img-text {
+  transform: translateY(-100%);
+  transition: transform var(--delay-time) var(--cubic-1);
+}
+
+/*---------------------------Елементи списка портфолио---------------------------*/
 
 .port-text-group {
   padding-top: 20px;
@@ -626,11 +677,13 @@ img {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  transition: border-color var(--delay-time) var(--cubic-1);
 }
 
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--fist-text-color);
+  transition: border-color var(--delay-time) var(--cubic-1);
 }
 
 .clients-icon {
